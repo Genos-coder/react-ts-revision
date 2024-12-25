@@ -1,15 +1,14 @@
 
 import "./App.css";
-import PeopleList from "./components/describing/challenge/listwithkey/PeopleList";
-import RecipesListProblem from "./components/describing/challenge/listwithkey/RecipesListProblem";
+import Gallery from "./components/interactivity/challenge/Gallery";
+
 
 
 function App() {
   
   return (
     <div className=" flex justify-center flex-col items-center">
-      {/* <PeopleList/> */}
-    <RecipesListProblem/>
+      <Gallery/>
     </div>
   );
 }
