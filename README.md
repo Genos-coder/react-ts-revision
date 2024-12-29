@@ -1,50 +1,27 @@
-# React + TypeScript + Vite
+# Pure Components/functions
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- You cannot state the variable outside the react component directly and can't do the operations like increment , because this will cause unexpected behavior below are hypothetical examples
 
-Currently, two official plugins are available:
+```
+let guest = 0;
+function Cup(){
+  guest = guest + 1;
+}
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Cup(); 
+console.log(guest); // will print 2 instead of 1 because react render the component two times
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- But when you use event listeners to increment the value it behave normally
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```
+let guest = 0;
+function Cup(){
+  const handleClick =()=>{
+   guest = guest + 1;
+  }
+}
+Cup(); 
+console.log(guest); 
 ```
