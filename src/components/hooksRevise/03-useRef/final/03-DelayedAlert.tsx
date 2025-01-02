@@ -2,7 +2,6 @@ import { useRef, useState } from "react"
 
 function DelayedAlert() {
     const  [sending, setSending]=useState(false);
-     const [text, setText] = useState("");
     const refContainer = useRef<null | number>(null);
     const handleSend = ()=>{
         setSending(true);
@@ -21,7 +20,7 @@ function DelayedAlert() {
       <input type="text" className="border border-black rounded-lg" />
       {
         !sending ? 
-        <button onClick={()=>setSending(true)} className="bg-black text-white p-1 rounded-lg">Send</button>
+        <button onClick={()=>handleSend()} className="bg-black text-white p-1 rounded-lg">Send</button>
         : 
         <button disabled className="bg-black disabled:bg-slate-700 animate-pulse text-white p-1 rounded-lg">...sending</button>
       }
