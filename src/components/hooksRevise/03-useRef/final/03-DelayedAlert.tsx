@@ -7,12 +7,25 @@ function DelayedAlert() {
     const handleSend = ()=>{
         setSending(true);
         refContainer.current = setTimeout(()=>{
-            alert()
+            alert("sent!")
         },5000)
     }
+    const undoHandler = ()=>{ 
+      if(refContainer.current){
+        clearInterval(refContainer.current)
+        setSending(false)
+      }
+    }
   return (
-    <div>
-        <button></button>
+    <div className="flex gap-2">
+      <input type="text" className="border border-black rounded-lg" />
+      {
+        !sending ? 
+        <button onClick={()=>setSending(true)} className="bg-black text-white p-1 rounded-lg">Send</button>
+        : 
+        <button disabled className="bg-black disabled:bg-slate-700 animate-pulse text-white p-1 rounded-lg">...sending</button>
+      }
+      {sending && <button onClick={undoHandler} className="bg-black text-white p-1 rounded-lg">Undo</button>}
     </div>
   )
 }
