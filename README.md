@@ -10,7 +10,6 @@ function Cup(){
 
 Cup(); 
 console.log(guest); // will print 2 instead of 1 because react render the component two times
-
 ```
 
 - But when you use event listeners to increment the value it behave normally
@@ -25,3 +24,6 @@ function Cup(){
 Cup(); 
 console.log(guest); 
 ```
+
+
+# Submit button conflicts in forms

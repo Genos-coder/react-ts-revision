@@ -20,8 +20,9 @@ export default function TaskList({
 }:TodoType) {
   return (
     <ul className='w-full gap-2   flex flex-col'>
+      <img src="" alt="" />
       {todos.map(todo => (
-        <li className='flex w-full p-2 justify-between gap-2' key={todo.id}>
+        <li  className='flex w-full p-2 justify-between gap-2' key={todo.id}>
           <Task
             todo={todo}
             onChangeTodo={onChangeTodo}

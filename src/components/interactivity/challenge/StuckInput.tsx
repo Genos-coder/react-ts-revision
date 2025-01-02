@@ -10,15 +10,14 @@ export default function StuckInput() {
     let {value,name}= e.target
     setUser(prev=>({...prev,[name]:value}))
    }
-  
+
+   
      function handleReset() {
         setUser({
             firstName:"",
             lastName:""
         })
     }
-    
-  
     return (
       <form className="flex flex-col w-1/3 gap-2 bg-teal-500 text-white p-4 rounded-lg" onSubmit={e => e.preventDefault()}>
         <input

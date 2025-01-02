@@ -1,6 +1,9 @@
+type PropsType = {
+  position:{x:number,y:number}
+}
 export default function Background({
     position
-  }) {
+  }:PropsType) {
     return (
       <div style={{
         position: 'absolute',

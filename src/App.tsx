@@ -1,14 +1,16 @@
 
 import "./App.css";
-import Gallery from "./components/interactivity/challenge/Gallery";
+import BasicRef from "./components/hooksRevise/03-useRef/final/01-BasicRef";
+import StopWatch from "./components/hooksRevise/03-useRef/final/02-StopWatch";
+
+ 
 
 
 
 function App() {
-  
   return (
-    <div className=" flex justify-center flex-col items-center">
-      <Gallery/>
+    <div className=" flex justify-center h-screen flex-col items-center">
+      <StopWatch/>
     </div>
   );
 }
