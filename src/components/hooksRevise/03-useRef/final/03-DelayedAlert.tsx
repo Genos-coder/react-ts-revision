@@ -11,10 +11,12 @@ function DelayedAlert() {
     }
     const undoHandler = ()=>{ 
       if(refContainer.current){
-        clearInterval(refContainer.current)
+        clearTimeout(refContainer.current)
         setSending(false)
       }
     }
+
+
   return (
     <div className="flex gap-2">
       <input type="text" className="border border-black rounded-lg" />

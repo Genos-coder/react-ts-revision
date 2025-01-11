@@ -11,7 +11,7 @@ function StopWatch() {
         setStartTime(Date.now());
         setNow(Date.now());
         refContainer.current = setInterval(() => {
-            setNow(Date.now());
+            setNow(Date.now()); 
         }, 10);
     }
     let secondsPassed = 0;

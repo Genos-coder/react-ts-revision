@@ -4,7 +4,7 @@ const DebounceButton = ({onClick, children}:{onClick:()=>void, children:React.Re
     const refContainer = useRef<number |null>();
     
     return <button className="bg-black w-full text-white rounded-lg p-1 " onClick={()=>{
-
+        
         if(refContainer.current){
             clearTimeout(refContainer.current);
         }
