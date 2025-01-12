@@ -29,13 +29,11 @@ function RefinedSlider() {
         <ul className="w-full h-full  overflow-x-auto">
     {catList.map((cat)=>{
       return <li className="w-full h-full" key={`${cat}aa1`} ref={(node)=>{
-        if(node){
           const map = getMap();
-          map?.set(cat,node)
-        }else{
-          const map = getMap();
-          map?.delete(cat)
-        }
+          map?.set(cat,node!)
+          return ()=>{
+            map?.delete(cat)
+          }
       }}>
         <img className="w-full h-full object-cover" src={cat} alt="" />
       </li>
