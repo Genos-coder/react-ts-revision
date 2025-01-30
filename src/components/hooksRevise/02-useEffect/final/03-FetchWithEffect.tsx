@@ -37,7 +37,7 @@ function FetchWithEffect() {
         setLoading(false); // Ensure loading is false
       }
     };
-
+    
     fetchUser();
     return () => {
       controller.abort(); // Properly cancel the request

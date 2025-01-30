@@ -6,6 +6,7 @@ export default function TrafficLight() {
   function handleClick() {
     //here if we use substitution method we know that after setWalk(!walk) we still have the walk  value true which is get by alert 
       setWalk(!walk);
+      console.log(walk)
       alert(walk?"Stop is next":"walk is next")
   }
 

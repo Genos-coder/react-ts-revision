@@ -4,7 +4,7 @@ import { sculptureList } from '../../../data/data';
 export default function Gallery() {
   const [index, setIndex] = useState<number>(0);
   const [showMore, setShowMore] = useState<boolean>(false);
-
+ 
   function handleNextClick() {
     if(index < sculptureList.length-1   ){
         setIndex(index+1)

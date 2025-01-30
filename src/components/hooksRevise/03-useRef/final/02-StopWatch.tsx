@@ -8,6 +8,7 @@ function StopWatch() {
         if(startTime !==null && startTime >0){
             return
         }
+        
         setStartTime(Date.now());
         setNow(Date.now());
         refContainer.current = setInterval(() => {

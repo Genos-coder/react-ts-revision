@@ -2,6 +2,7 @@ import { useState } from "react"
 
 function Counter() {
     const [count, setCount] = useState(0);
+    
 
   return (
     <div className="border border-black p-4 rounded-lg flex flex-col justify-center items-center gap-4">

@@ -4,7 +4,7 @@ function AsyncCounter() {
     const [count, setCount] = useState(0);
 
     function handleClick(){
-        console.log("triggered")
+        // console.log("triggered")
         // setTimeout(()=>{
         //     setCount(count+1)
         // },3000)

@@ -23,6 +23,7 @@ export default function Canvas() {
     })
   }
 
+  
   function handleColorChange(e:ChangeEvent<HTMLSelectElement>) {
     setShape({
       ...shape,
